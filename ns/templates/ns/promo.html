@@ -16,22 +16,32 @@
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid col-lg-10 col-md-8 col-sm-8 col-7">
+            <div class="container-fluid col-lg-10 col-md-8 col-sm-10 col-7">
                 <a class="navbar-brand" href="#"> <img src="{% static 'ns/Vector.png' %}"  class="d-inline-block align-top" >
                 </a>
-                <button class="navbar-toggler text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler text-center"
+                        type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03"
+                        aria-controls="navbarTogglerDemo03"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="container-fluid col-lg-4">
+                <div class="container-fluid col-lg-10 col-md-8 col-sm-1 col-7">
 
-                    <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse justify-content-center"
+                         id="navbarTogglerDemo03">
                         <div class="navbar-nav">
-                            <a class="nav-link text-uppercase" href="#">преимущества</a>
+                            <a class="nav-link text-uppercase" href="#">преимущества </a>
                             <a class="nav-link text-uppercase" href="#">фотографии</a>
                             <a class="nav-link text-uppercase" href="#">контакты</a>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="container-fluid col-lg-10 col-md-8 col-sm-8 col-7">
+                <button class="btn btn-danger me-5" type="button">вход</button>
                 </div>
             </div>
         </nav>

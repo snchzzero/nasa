@@ -1,10 +1,67 @@
-   <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+
 
 .text1
 {
+    width: 158px;
+    height: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.frame_t1_t2
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.text2
+{
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-top: 126px;
+    text-align: center;
+
 
 }
+
+.text2_2
+{
+    margin-left: auto;
+    margin-right: auto;
+    /* Текст */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+    text-align: center;
+    letter-spacing: 0.02em;
+    /* Серый */
+    color: #3C3C3C;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+

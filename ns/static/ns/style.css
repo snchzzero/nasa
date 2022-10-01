@@ -63,5 +63,98 @@
     flex-grow: 0;
 }
 
+.text3
+{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 26px;
+/* or 186% */
+
+letter-spacing: 0.02em;
+/* Чёрный */
+color: #0A121E;
+}
+
+
+
+.block_picture_1_1
+{
+    display: inline-block;
+    absolute
+
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.block_picture_1_2
+{
+    display: inline-block;
+    position: static;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.block_picture_2_1
+{
+    display: inline-block;
+    position: static;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.block_picture_2_2
+{
+    display: inline-block;
+    position: real;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+
+    width: 263px;
+    height: 200px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
 
 

@@ -159,9 +159,9 @@ color: #0A121E;
 .background_png
 {
 
-     background-image: url("/static/ns/123.png");
+     background: url("/static/ns/background_3.svg");
      color: white;
-     height: 650px;
+     height:892px;
      padding: 100px 0 0 0;
      background-size: cover;
      background-position: center center;
@@ -169,7 +169,13 @@ color: #0A121E;
 
 .sadasd
 {
-    background-image: url({% static 'ns/unsplash_YvRTYzkT6Hs.png' %});
+    background-image: url({% static 'ns/background_3.svg' %});
+     background-image: url("/static/ns/background_3.svg");
 }
 
+.slick_row
+{
+    position: static;
+    height: 199px;
+}
 

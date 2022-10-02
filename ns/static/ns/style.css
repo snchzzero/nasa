@@ -1,4 +1,4 @@
-
+{% load static %} <!-- загружаем папку статик -->
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 
@@ -156,5 +156,20 @@ color: #0A121E;
     flex-grow: 0;
 }
 
+.background_png
+{
+
+     background-image: url("/static/ns/123.png");
+     color: white;
+     height: 650px;
+     padding: 100px 0 0 0;
+     background-size: cover;
+     background-position: center center;
+}
+
+.sadasd
+{
+    background-image: url({% static 'ns/unsplash_YvRTYzkT6Hs.png' %});
+}
 
 

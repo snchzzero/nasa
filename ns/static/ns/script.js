@@ -6,20 +6,10 @@ $('.slider_for').slick({
   asNavFor: '.slider'
 });
 
-//$(document).ready(function(){
-//  $('.slider').slick({
-//        arrows: true,
-//        slidesToShow: 5,
-//        slidesToScroll: 1,
-//        asNavFor: '.slider_for',
-//        dots: true,
-//        centerMode: true,
-//        focusOnSelect: true
-//  });
-//});
 $(document).ready(function(){
   $('.slider').slick({
-  centerMode: true,
+  centerMode: false,
+  //infinite: true,
   centerPadding: '60px',  //'60px'
   slidesToShow: 5,
   asNavFor: '.slider_for',
@@ -39,7 +29,7 @@ $(document).ready(function(){
         arrows: false,
         centerMode: false,
         centerPadding: '40px', //'40px'
-        slidesToShow: 1
+        //slidesToShow: 1
       }
     }
   ]

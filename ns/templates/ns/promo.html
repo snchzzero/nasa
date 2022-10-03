@@ -121,84 +121,119 @@
                                 background-position: center;
                                 background-size: cover;">
 
+                    <div class="container-fluid">
+                    <div class="foto_text d-flex justify-content-center align-items-center">
+                        <div class="row">
+                        Фотографии
+                        </div>
+                    </div>
+                    </div>
                     <!-- Большое изображение слика -->
-                    <div class="row d-flex justify-content-center">
+                    <div class="container-fluid pt-3">
+                        <div class="row d-flex justify-content-center">
                         <div class="col-lg-11 align-self-center">
                             <div class="slider_for align-self-center">
                             <div class="slider__item d-flex justify-content-center">
-                                    <img src="{% static 'ns/1.png' %}" alt="">
+                                <img src="{% static 'ns/1.png' %}"  width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/2.png' %}" alt="">
+                                <img src="{% static 'ns/2.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/3.png' %}" alt="">
+                                <img src="{% static 'ns/3.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/4.png' %}" alt="">
+                                <img src="{% static 'ns/4.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/5.png' %}" alt="">
+                                <img src="{% static 'ns/5.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/6.png' %}" alt="">
+                                <img src="{% static 'ns/6.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/7.png' %}" alt="">
+                                <img src="{% static 'ns/7.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/8.png' %}" alt="">
+                                <img src="{% static 'ns/8.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                             <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/9.png' %}" alt="">
+                                <img src="{% static 'ns/9.png' %}" width="40%" class="img-fluid rounded-5" alt="">
                             </div>
                         </div>
                         </div>
                     </div>
+                    </div>
 
                     <!-- Карусель маленьких изображений слика -->
-                    <div class="container-fluid">
+                    <div class="d-flex align-self-end">
+                    <div class="container-fluid p-4">
                         <div class="slick_row d-flex justify-content-center align-items-center">
-                            <div class="col-lg-9">
+                            <div class="col-lg-10 col-sm-10">
                                 <div class="row">
-                                    <div class="slider">
+                                    <div class="arrow_prev col-1 d-flex align-items-center">
+                                        <img class="arrow_prev" src="{% static 'ns/prevArrow.svg' %}" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="slider col-10">
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/1.png' %}" width="80%" class="img-fluid rounded-5" alt="">
+                                            <img class="img12" src="{% static 'ns/1.png' %}" class="img-fluid rounded-5" alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/2.png' %}" width="80%" class="img-fluid rounded-5" alt="">
+                                            <img class="img12" src="{% static 'ns/2.png' %}" class="img-fluid rounded-5" alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/3.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12"src="{% static 'ns/3.png' %}"  class="img-fluid rounded-5" alt="">
         <!--                                    <img src="{% static 'ns/3.png' %}" width="80%" class="img-fluid rounded-5" alt="">-->
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/4.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12" src="{% static 'ns/4.png' %}" class="img-fluid rounded-5" alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/5.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12" src="{% static 'ns/5.png' %}" class="img-fluid rounded-5 " alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/6.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12" src="{% static 'ns/6.png' %}" class="img-fluid rounded-5 " alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/7.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12" src="{% static 'ns/7.png' %}" class="img-fluid rounded-5 " alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/8.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12" src="{% static 'ns/8.png' %}" class="img-fluid rounded-5 " alt="">
                                         </div>
                                         <div class="slider__item">
-                                            <img src="{% static 'ns/9.png' %}" width="80%" class="img-fluid rounded-5 " alt="">
+                                            <img class="img12" src="{% static 'ns/9.png' %}" class="img-fluid rounded-5 " alt="">
                                         </div>
+                                    </div>
+                                    <div class="arrow_next col-1 d-flex align-items-center">
+                                        <img src="{% static 'ns/nextArrow.svg' %}" class="img-fluid" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div> </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="col-lg-10 col-md-10 ">
+                    <div class="col-lg-5 col-md-5 d-flex justify-content-start">
+                        <div class="container-fluid">
+                        <div class="row"> <div class="col contacts"> Контакты </div> </div>
+                        <div class="row"> <div class="col contacts2">Адрес Space Center Houston: </div></div>
+                        <div class="row"> <div class="col contacts3">1601 NASA Parkway, Houston, Texas 77058 </div></div>
+                        <div class="row"> <div class="col contacts2">Сайт:</div></div>
+
+                    </div></div>
+                    <div class="col-lg-5 justify-content-center">
                     </div>
                 </div>
             </div>
 
-<!--            <div class="background_png"></div>-->
+
+
 
 
 

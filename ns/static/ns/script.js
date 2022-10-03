@@ -6,32 +6,12 @@ $('.slider_for').slick({
   asNavFor: '.slider'
 });
 
-$(document).ready(function(){
-  $('.slider').slick({
-  centerMode: false,
-  //infinite: true,
-  centerPadding: '60px',  //'60px'
+$('.slider').slick({
+  infinite: true,
   slidesToShow: 5,
+  slidesToScroll: 1,
+  centerMode: true,
   asNavFor: '.slider_for',
-  responsive: [
-    {
-      breakpoint: 768, //768
-      settings: {
-        arrows: false,
-        centerMode: false,
-        centerPadding: '40px',
-        slidesToShow: 5
-      }
-    },
-    {
-      breakpoint: 480, //480
-      settings: {
-        arrows: false,
-        centerMode: false,
-        centerPadding: '40px', //'40px'
-        //slidesToShow: 1
-      }
-    }
-  ]
-  });
+  nextArrow: '.arrow_next',
+  prevArrow: '.arrow_prev',
 });

@@ -179,3 +179,110 @@ color: #0A121E;
     height: 199px;
 }
 
+.foto_text
+{
+    position: static;
+    height: 199px;
+
+    /* h2 */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    /* identical to box height, or 124% */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.small_slick
+{
+
+    width: 50px;
+    height: 50px;
+    object-fit: none;
+
+}
+
+.container11
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
+
+.img12
+{
+    max-width: 130px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+
+}
+
+
+
+
+.arrow_prev,
+ {
+  height: 10%;
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.contacts
+{
+/* Контакты */
+
+/* h2 */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 42px;
+line-height: 52px;
+/* identical to box height, or 124% */
+letter-spacing: 0.02em;
+/* Чёрный */
+color: #0A121E;
+}
+
+.contacts2
+{
+width: 324px;
+height: 26px;
+/* h3 */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 26px;
+/* identical to box height, or 186% */
+letter-spacing: 0.02em;
+/* Чёрный */
+color: #0A121E;
+}
+
+.contacts3
+{
+width: 324px;
+height: 30px;
+/* Текст мелкий */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height, or 200% */
+letter-spacing: 0.02em;
+/* Серый */
+color: #3C3C3C;
+}
+
+
+

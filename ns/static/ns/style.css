@@ -284,5 +284,43 @@ letter-spacing: 0.02em;
 color: #3C3C3C;
 }
 
+.contacts_link
+{
+width: 77px;
+height: 30px;
+/* Текст мелкий */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height, or 200% */
+letter-spacing: 0.02em;
+/* Голубой */
+color: #004382;
+}
+
+.tel_you
+{
+gap: 15px;
+width: 63px;
+height: 24px;
+}
+
+.question
+{
+width: 555px;
+height: 26px;
+/* h4 */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height, or 130% */
+letter-spacing: 0.02em;
+/* Чёрный */
+color: #0A121E;
+}
 
 

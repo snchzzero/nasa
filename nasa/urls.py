@@ -19,5 +19,7 @@ from ns import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('promo/', views.promo, name='promo')
+    path('promo/', views.promo, name='promo'),
+    path('test/', views.test, name='test')
+
 ]

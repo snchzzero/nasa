@@ -1,0 +1,182 @@
+{% load static %}
+
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'test/style2.css' %}">
+</head>
+<body>
+    <header class="header bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">
+                    <img class="logo" src="{% static 'test/images/Vector.svg' %}" alt="logo">
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mb-2 mb-lg-0 navigate">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Преимущества</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">фотографии</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="btn" type="submit">Вход</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1 class="title">Космическое агентство</h1>
+            <p class="info-text">
+                Национальное управление по аэронавтике и исследованию космического пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США.
+            </p>
+
+            <div class="info-content d-flex flex-row justify-content-center flex-wrap">
+                <div class="advantage d-flex flex-row flex-wrap">
+                    <div class="card">
+                        <img src="{% static 'test/images/advantage_1.svg' %}" class="card-img-top card-img" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Спейс шаттлы —пилотируемые корабли</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'test/images/advantage_2.svg' %}" class="card-img-top card-img" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Лучшее телескопическое оборудование</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'test/images/advantage_3.svg' %}" class="card-img-top card-img" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Целимся на Луну и Марс</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'test/images/advantage_4.svg' %}" class="card-img-top card-img" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Золотая медаль по научным исследованиям</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-image"></div>
+            </div>
+        </div>
+    </section>
+
+    {% for slider in all_sliders %}
+    <section class="photo" style="background: {{slider.bg_image}};">
+        <h2 class="photo-title">{{slider.title}}</h2>
+        <div class="container">
+            <div id="{{slider.slider_id}}" class="main-slider">
+                {% for img in slider.images %}
+                    <div class="main-slider__item">
+                        <img src="{{img}}" alt="1">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <section class="contacts">
+        <div class="container">
+            <h2 class="contacts-title">Контакты</h2>
+            <div class="d-flex flex-wrap wrapper">
+                <div class="wrapper__item">
+                    <div class="wrapper__item-adres">
+                        <span class="wrapper__item-name">Адрес Space Center Houston:</span>
+                        <span class="wrapper__item-text">1601 NASA Parkway, Houston, Texas 77058</span>
+                    </div>
+
+                    <div class="wrapper__item-link">
+                        <span>Сайт:</span>
+                        <a href="#" class="wrapper__link">NASA.gov</a>
+                        <div class="wrapper__item-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12ZM12.43 8.859C11.263 9.344 8.93 10.349 5.432 11.873C4.864 12.099 4.566 12.32 4.539 12.536C4.493 12.902 4.951 13.046 5.573 13.241C5.658 13.268 5.746 13.295 5.836 13.325C6.449 13.524 7.273 13.757 7.701 13.766C8.09 13.774 8.524 13.614 9.003 13.286C12.271 11.079 13.958 9.964 14.064 9.94C14.139 9.923 14.243 9.901 14.313 9.964C14.383 10.026 14.376 10.144 14.369 10.176C14.323 10.369 12.529 12.038 11.599 12.902C11.309 13.171 11.104 13.362 11.062 13.406C10.968 13.503 10.872 13.596 10.78 13.685C10.21 14.233 9.784 14.645 10.804 15.317C11.294 15.64 11.686 15.907 12.077 16.173C12.504 16.464 12.93 16.754 13.482 17.116C13.622 17.208 13.756 17.303 13.887 17.396C14.384 17.751 14.831 18.069 15.383 18.019C15.703 17.989 16.035 17.688 16.203 16.789C16.6 14.663 17.382 10.059 17.563 8.161C17.574 8.00341 17.5673 7.84509 17.543 7.689C17.5285 7.56293 17.4671 7.44693 17.371 7.364C17.228 7.247 17.006 7.222 16.906 7.224C16.455 7.232 15.763 7.473 12.43 8.859Z" fill="#3483CB"/>
+                            </svg>
+                            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.5 3.50701C23.3641 3.02225 23.0994 2.58336 22.734 2.23702C22.3583 1.88002 21.8978 1.62465 21.396 1.49501C19.518 1.00001 11.994 1.00002 11.994 1.00002C8.85734 0.964328 5.72144 1.12129 2.60401 1.47001C2.1022 1.60923 1.64257 1.8703 1.26601 2.23002C0.896007 2.58601 0.628007 3.02502 0.488007 3.50602C0.1517 5.31776 -0.0117011 7.15736 6.83166e-06 9.00002C-0.0119932 10.841 0.151007 12.68 0.488007 14.494C0.625007 14.973 0.892007 15.41 1.26301 15.763C1.63401 16.116 2.09601 16.371 2.60401 16.506C4.50701 17 11.994 17 11.994 17C15.1347 17.0358 18.2746 16.8788 21.396 16.53C21.8978 16.4004 22.3583 16.145 22.734 15.788C23.0993 15.4417 23.3637 15.0028 23.499 14.518C23.8441 12.707 24.0119 10.8666 24 9.02302C24.026 7.17162 23.8584 5.32258 23.5 3.50602V3.50701ZM9.60201 12.424V5.57701L15.862 9.00102L9.60201 12.424Z" fill="#FF342B"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="wrapper__item-questions">
+                        <span class="questins-title">Остались вопросы?</span>
+                        <p class="questions-description">
+                            Visit our Visitor Information page to get helpful tips and advice about visiting the center, email schinfo@spacecenter.org, or submit a question by filling out the form below.
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                              <input type="text" class="form-control" id="exampleInputName" placeholder="Ваше ФИО*" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ваш email*" required>
+                              </div>
+                            <div class="mb-3">
+                              <input type="tel" class="form-control" id="exampleInputPhone" placeholder="Ваш телефон*" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ваше сообщение*" required></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                              <label class="form-check-label" for="exampleCheck1">
+                                Согласие на <a class="wrapper__link">обработку персональных данных</a>
+                              </label>
+                            </div>
+                            <button type="submit" class="btn">Отправить</button>
+                          </form>
+                    </div>
+                </div>
+
+                <div class="wrapper__item">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A45962ace09341231deaf9e0a231f39fd9f6474c72ee8e1f7edaada9fc2130e90&amp;source=constructor" width="555" height="720" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper d-flex justify-content-between">
+                <a class="footer-logo" href="#">
+                    <img class="logo" src="{% static 'test/images/Vector.svg' %}" alt="logo">
+                </a>
+                <div class="footer-wrapper__conf d-flex">
+                    <span class="footer-wrapper__title">©NASA, all rights reserved</span>
+                    <a href="#" class="footer-link">Персональные данные</a>
+                </div>
+                <div class="footer-wrapper__brand d-flex">
+                    <span class="footer-wrapper__title">Разработка сайта —</span>
+                    <a href="#" class="footer-link">вангер.рф</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="{% static 'test/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'test/js/slick.min.js' %}"></script>
+    <script src="{% static 'test/js/script.js' %}"></script>

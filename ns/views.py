@@ -5,3 +5,7 @@ from django.shortcuts import render
 def promo(request):
     if request.method == 'GET':
         return render(request, 'ns/promo.html')
+
+def test(request):
+    if request.method == 'GET':
+        return render(request, 'ns/test.html')

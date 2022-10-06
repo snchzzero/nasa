@@ -359,5 +359,22 @@ color: #3C3C3C;
     color: #FFFFFF;
 }
 
+.footer
+{
+    background-color: #0A121E;
+}
+
+.footer_t
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
 
 

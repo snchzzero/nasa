@@ -1,3 +1,5 @@
 from django.contrib import admin
+from filer.admin.fileadmin import FileAdmin
+from ns.models import My_image  # импортируем модели из модельс
 
-# Register your models here.
+admin.site.register(My_image)  # зарегистрируем импортированные модели в админке

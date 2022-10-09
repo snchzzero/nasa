@@ -30,6 +30,17 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+# для ImageField
+THUMBNAIL_HIGH_RESOLUTION = True
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters'
+)
+
+# для ImageField:'easy_thumbnails', 'filer', 'mptt'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +51,9 @@ INSTALLED_APPS = [
     'ns',
     'easy_thumbnails',
     'filer',
+    'mptt',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -121,3 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# для ImageField
+MEDIA_ROOT = f'{BASE_DIR}/media'
+MEDIA_URL = '/media/'
+

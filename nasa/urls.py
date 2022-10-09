@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ns import views
+from django.conf import settings  # для ImageField
+from django.conf.urls.static import static  # для ImageField
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,3 +25,7 @@ urlpatterns = [
     path('test/', views.test, name='test')
 
 ]
+
+# для ImageField
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

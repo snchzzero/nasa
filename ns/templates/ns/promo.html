@@ -1,4 +1,5 @@
 {% load static %} <!-- загружаем папку статик -->
+{% load thumbnail %}
 
 <html lang="en">
     <head>
@@ -335,6 +336,8 @@
                            Разработка сайта — <a href="https://xn--80adei2bu.xn--p1ai/"
                            target="_blank">вангер.рф </a>
                        </div>
+                       <img src="{{ object.img.url }}" />
+                       <img src="{% thumbnail My_image.cover.3 crop %}" />
 
 
                    </div>

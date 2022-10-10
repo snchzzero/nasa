@@ -112,7 +112,7 @@
             </div>
 
 
-
+            {% if imgs %}
             <!-- Блок слайдера -->
             <div class="container-fluid">
                 <div class="bg-image "
@@ -131,81 +131,124 @@
                         </div>
                     </div>
                     </div>
+
+
                     <!-- Большое изображение слика -->
+<!--                    <div class="container-fluid pt-3">-->
+<!--                        <div class="row d-flex justify-content-center">-->
+<!--                        <div class="col-lg-11 align-self-center">-->
+<!--                            <div class="slider_for align-self-center">-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/1.png' %}"  width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/2.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/3.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/4.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/5.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/6.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/7.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/8.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item d-flex justify-content-center">-->
+<!--                                <img src="{% static 'ns/9.png' %}" width="40%" class="img-fluid rounded-5" alt="">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    </div>-->
+
+
                     <div class="container-fluid pt-3">
                         <div class="row d-flex justify-content-center">
                         <div class="col-lg-11 align-self-center">
                             <div class="slider_for align-self-center">
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/1.png' %}"  width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/2.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/3.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/4.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/5.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/6.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/7.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/8.png' %}" width="40%" class="img-fluid rounded-5" alt="">
-                            </div>
-                            <div class="slider__item d-flex justify-content-center">
-                                <img src="{% static 'ns/9.png' %}" width="40%" class="img-fluid rounded-5" alt="">
+                                {% for img in imgs %}
+                                <div class="slider__item d-flex justify-content-center">
+                                    <img src="{{ img.cover.url }}" width="40%"  class="img-fluid rounded-5 " alt="">
+                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                         </div>
-                    </div>
                     </div>
 
+
                     <!-- Карусель маленьких изображений слика -->
-                    <div class="d-flex align-self-end">
+<!--                    <div class="d-flex align-self-end">-->
+<!--                    <div class="container-fluid p-4">-->
+<!--                        <div class="slick_row d-flex justify-content-center align-items-center">-->
+<!--                            <div class="col-lg-10 col-sm-10">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="arrow_prev col-1 d-flex align-items-center">-->
+<!--                                        <img class="arrow_prev" src="{% static 'ns/prevArrow.svg' %}" class="img-fluid" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="slider col-10">-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/1.png' %}" class="img-fluid rounded-5" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/2.png' %}" class="img-fluid rounded-5" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12"src="{% static 'ns/3.png' %}"  class="img-fluid rounded-5" alt="">-->
+<!--        &lt;!&ndash;                                    <img src="{% static 'ns/3.png' %}" width="80%" class="img-fluid rounded-5" alt="">&ndash;&gt;-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/4.png' %}" class="img-fluid rounded-5" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/5.png' %}" class="img-fluid rounded-5 " alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/6.png' %}" class="img-fluid rounded-5 " alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/7.png' %}" class="img-fluid rounded-5 " alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/8.png' %}" class="img-fluid rounded-5 " alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="slider__item">-->
+<!--                                            <img class="img12" src="{% static 'ns/9.png' %}" class="img-fluid rounded-5 " alt="">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="arrow_next col-1 d-flex align-items-center">-->
+<!--                                        <img src="{% static 'ns/nextArrow.svg' %}" class="img-fluid" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div> </div>-->
+
+                <div class="d-flex align-self-end">
                     <div class="container-fluid p-4">
                         <div class="slick_row d-flex justify-content-center align-items-center">
                             <div class="col-lg-10 col-sm-10">
                                 <div class="row">
                                     <div class="arrow_prev col-1 d-flex align-items-center">
-                                        <img class="arrow_prev" src="{% static 'ns/prevArrow.svg' %}" class="img-fluid" alt="">
+                                        <img src="{% static 'ns/prevArrow.svg' %}" class="img-fluid" alt="">
                                     </div>
                                     <div class="slider col-10">
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/1.png' %}" class="img-fluid rounded-5" alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/2.png' %}" class="img-fluid rounded-5" alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12"src="{% static 'ns/3.png' %}"  class="img-fluid rounded-5" alt="">
-        <!--                                    <img src="{% static 'ns/3.png' %}" width="80%" class="img-fluid rounded-5" alt="">-->
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/4.png' %}" class="img-fluid rounded-5" alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/5.png' %}" class="img-fluid rounded-5 " alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/6.png' %}" class="img-fluid rounded-5 " alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/7.png' %}" class="img-fluid rounded-5 " alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/8.png' %}" class="img-fluid rounded-5 " alt="">
-                                        </div>
-                                        <div class="slider__item">
-                                            <img class="img12" src="{% static 'ns/9.png' %}" class="img-fluid rounded-5 " alt="">
-                                        </div>
+                                        {% for img in imgs %}
+
+                                            <div class="slider__item">
+                                                <img class="img12" src="{{ img.cover.url }}" class="img-fluid rounded-5 " alt="">
+                                            </div>
+
+                                        {% endfor %}
                                     </div>
                                     <div class="arrow_next col-1 d-flex align-items-center">
                                         <img src="{% static 'ns/nextArrow.svg' %}" class="img-fluid" alt="">
@@ -213,12 +256,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div> </div>
+                    </div>
+                </div>
+
+
+
 
 
 
                 </div>
             </div>
+            {% endif %}
 
             <!-- Блок контакты -->
             <div class="container-fluid text-center">
@@ -234,7 +282,6 @@
                 <div class="d-flex justify-content-center">
 
                     <div class="row col-10 text-start ">
-<!--                        <div class="col-lg-6 col-md-6 col-sm-12 col-6" style="height: 150px;">-->
 
                         <div class="order-sm-1 order-md-1 order-lg-1 col-lg-6 col-md-12 col-sm-12 col-6">
                             <div class="contacts2"> Адрес Space Center Houston: </div>
@@ -273,32 +320,6 @@
                             </div>
                         </div>
 
-<!--                        <div class="order-sm-3 order-md-3 order-lg-3 col-lg-6 col-md-6 col-sm-12 col-6 mt-5">-->
-<!--                            <div class="question"> Остались вопросы? </div>-->
-<!--                            <div class="question2"> Visit our Visitor Information page to get helpful tips and advice-->
-<!--                                about visiting the center, email schinfo@spacecenter.org, or submit a question by-->
-<!--                                filling out the form below. </div>-->
-<!--                            <div class="row col-11 gy-3 mt-3 form2">-->
-<!--                                <input class="form-control" type="text" placeholder="Ваше ФИО*" aria-label="default input example">-->
-<!--                                <input class="form-control" type="text" placeholder="Ваш email*" aria-label="default input example">-->
-<!--                                <input class="form-control" type="text" placeholder="Ваш телефон*" aria-label="default input example">-->
-
-<!--                                <textarea type="message" class="form-control" id="exampleFormControlTextarea1"-->
-<!--                                          placeholder="Ваше сообщение*" rows="4"></textarea>-->
-<!--                            </div>-->
-
-<!--                            <div class="form-check question2 mt-3">-->
-<!--                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">-->
-<!--                                <label class="form-check-label" for="flexCheckDefault"> Согласие-->
-<!--                                    на <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/6c94959bc017ac80140621762d2ac59f6006b08c/" target="_blank">-->
-<!--                                        обработку персональных данных</a>-->
-<!--                                </label>-->
-<!--                            </div>-->
-
-<!--                            <div class="row col-6 mt-3">-->
-<!--                                <button class="btn btn-danger me-8 btn1_stl" type="button">отправить</button>-->
-<!--                            </div>-->
-<!--                        </div>-->
 
                         <div class="order-sm-2 order-md-2 order-lg-2 col-lg-6 col-md-12 col-sm-12 mt-3 d-flex justify-content-center">
                             <script type="text/javascript" charset="utf-8" async
@@ -314,8 +335,6 @@
 
                     </div>
                 </div>
-
-            </div>
 
             <!-- Footer (подвал) -->
             <div class="container-fluid d-flex justify-content-center text-center footer mt-5">
@@ -336,48 +355,47 @@
                            Разработка сайта — <a href="https://xn--80adei2bu.xn--p1ai/"
                            target="_blank">вангер.рф </a>
                        </div>
-                       <img src="{{ object.img.url }}" />
-                       <img src="{% thumbnail My_image.cover.3 crop %}" />
+
 
 
                    </div>
                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

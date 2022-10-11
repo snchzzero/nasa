@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'mptt',
+    'adminsortable2',
 ]
 
 

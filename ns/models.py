@@ -11,5 +11,27 @@ class My_image(models.Model):
     def __str__(self):
         return self.title
 
+class SortableMy_image(models.Model):
+    title = models.ForeignKey(
+        My_image,
+        verbose_name='Слайдер',
+        on_delete=models.CASCADE,
+        related_name='images')
+
+    my_order = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False,
+    )
+
+    image = FilerImageField(
+        verbose_name='Изображение',
+        on_delete=models.CASCADE,
+        related_name='slider_images',
+    )
+
+    class Meta:
+        ordering = ['my_order']
+
 
 

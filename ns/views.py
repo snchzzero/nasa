@@ -28,6 +28,6 @@ def promo(request):
     return render(request, 'ns/promo.html', {'imgs': all_images})
 
 
-
-
-
+def test(request):
+    if request.method == 'GET':
+        return render(request, 'ns/test.html')

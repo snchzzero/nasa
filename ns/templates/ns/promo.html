@@ -138,9 +138,11 @@
                         <div class="col-lg-11 align-self-center">
                             <div class="slider_for align-self-center">
                                 {% for img in imgs %}
-                                <div class="slider__item d-flex justify-content-center">
-                                    <img src="{{ img.cover.url }}" width="40%"  class="img-fluid rounded-5 " alt="">
-                                </div>
+                                    {% for im in img.images %}
+                                        <div class="slider__item d-flex justify-content-center">
+                                            <img src="{{ im }}" width="40%"  class="img-fluid rounded-5 " alt="">
+                                        </div>
+                                    {% endfor %}
                                 {% endfor %}
                             </div>
                         </div>
@@ -158,11 +160,11 @@
                                         </div>
                                         <div class="slider col-10">
                                             {% for img in imgs %}
-
+                                                {% for im in img.images %}
                                                 <div class="slider__item">
-                                                    <img class="img12" src="{{ img.cover.url }}" class="img-fluid rounded-5 " alt="" style="max-height: 80px;">
+                                                    <img class="img12" src="{{ im }}" class="img-fluid rounded-5 " alt="" style="max-height: 80px;">
                                                 </div>
-
+                                                {% endfor %}
                                             {% endfor %}
                                         </div>
                                         <div class="arrow_next col-1 d-flex align-items-center">

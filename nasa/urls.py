@@ -21,8 +21,8 @@ from django.conf.urls.static import static  # для ImageField
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('promo/', views.promo, name='promo'),
-    path('test/', views.test, name='test')
+    path('promo/', views.promo, name='promo')
+    #path('test/', views.test, name='test')
 
 ]
 
